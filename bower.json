@@ -1,0 +1,23 @@
+{
+  "name": "nft-agenda",
+  "version": "1.0",
+  "authors": [
+    "youen <youen@creativedata.fr>"
+  ],
+  "description": "Agenda Normandy French tech",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.5",
+    "angularjs": "1.4.5",
+    "angular-leaflet-directive" : "0.8.8",
+    "angular-moment": "0.10.3"
+  }
+}

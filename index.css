@@ -1,0 +1,24 @@
+#header h1 {
+  font-size: 400%;
+  padding: 5px 0px 0px 80px;
+}
+
+.map {
+  width: 100%;
+  min-height:480px;
+  height: auto;
+}
+
+.event {
+  border-bottom: #ff0066 solid 1px;
+  min-height: 60px;
+  overflow: hidden;
+  padding: 4px 0px;
+}
+
+.filters {
+  margin: 10px 0px 10px 0px;
+  border-top: #ff0066 solid 1px;
+  border-bottom: #ff0066 solid 1px;
+  padding: 4px 0px;
+}

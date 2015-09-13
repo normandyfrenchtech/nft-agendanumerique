@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Big Data Use Case</title>
+<meta charset="UTF-8">
+<link rel="icon"  href="favicon.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'><link href='index.css' rel='stylesheet' type='text/css'>
+<link href='bower_components/leaflet/dist/leaflet.css' rel='stylesheet' type='text/css'><link href='index.css' rel='stylesheet' type='text/css'>
+</head>
+<body ng-app="app"  ng-controller="main">
+  <div class="container-fluid">
+    <div id="header">
+      <div class="row">
+        <img src="img/NFT_LOGO_RVB1.jpg" alt="logo normandy french tech" height="80" class="pull-left">
+        <h1>Agenda Numérique</h1>
+      </div>
+    </div>
+    <div id="body">
+      <div class="row filters">
+        <div class="col-md-9" ng-init="eventFilter = { conference: true, meetup:true}">
+          <strong>Filtrer par Type</strong>
+          <input type="checkbox" ng-model="eventFilter.conference"> <img src="img/drakkar.png">Conférence</input>
+          <input type="checkbox" ng-model="eventFilter.meetup"> <img src="img/drakkar_blue.png">Meetup</input>
+        </div>
+        <div class="col-md-3">
+          <div class="input-group pull-right">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <input type="text" ng-model="search"  placeholder="Search for...">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="event" ng-repeat="event in events |  filter: { name:search, description:search}  | orderBy: startDate : 1">
+            <div>
+              {{ event.startDate | amDateFormat :'ll' }} <img src="{{ event.type | typeToIcon }}" class="pull-right">
+              <br/><a href="{{event.url}}">{{event.name}}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <leaflet center="map.center" markers="events | filter: { name:search, description:search} | eventsToMarks : eventFilter" defaults="map.defaults" class="map"></leaflet>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/leaflet/dist/leaflet.js"></script>
+  <script src="bower_components/angular-simple-logger/dist/index.js"></script>
+  <script src="bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+  <script src="bower_components/moment/min/moment.min.js"></script>
+  <script src="bower_components/moment/locale/fr.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

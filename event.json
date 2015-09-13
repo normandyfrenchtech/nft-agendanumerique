@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "lat": 49.3853356519,
+    "lng": 1.0705122195,
+    "lieu":"UFR Science et Technique",
+    "name": "Codeurs En Seine",
+    "category":"tech",
+    "type":"conference",
+    "logo": "http://www.codeursenseine.com/assets/img/logo-codeurs-en-seine.png",
+    "startDate": "2015-11-26T09:00:00.000Z",
+    "endDate": "2015-11-26T18:00:00.000Z",
+    "description": "Le rendez vous annuel de tous les codeurs.",
+    "url":"http://www.codeursenseine.com"
+  },
+  {
+    "id": "2",
+    "lat": 49.1688353,
+    "lng": -0.3651858,
+    "lieu":"MRI Esplanade Stéphane HESSEL, 14000 Caen",
+    "name": "Assises de la Médiation Numérique sur le thème de la Jeunesse",
+    "category":"jeunesse",
+    "type":"conference",
+    "logo": "http://img.scoop.it/zRuXlYrLK7e0uro7ODb95ZCb4wo9BUe7VcLwEA3Mxco=",
+    "startDate": "2015-11-26T09:00:00.000Z",
+    "endDate": "2015-11-26T18:00:00.000Z",
+    "description": "Le rendez vous annuel de tous les codeurs.",
+    "url":"www.assises-mediation-numerique.fr"
+  },
+  {
+    "id": "3",
+    "lat": 49.4297900,
+    "lng": 1.0668659,
+    "lieu":"Seine Innopolis",
+    "name": "NWX Tech#9",
+    "category":"tech",
+    "type":"meetup",
+    "logo": "http://summer-festival.nwx.fr/wp-content/uploads/2015/05/logo-nwx-petit.png?016ae5",
+    "startDate": "2015-10-10T18:00:00.000Z",
+    "endDate": "2015-10-10T21:00:00.000Z",
+    "description": "Le rendez vous annuel de tous les codeurs.",
+    "url":"www.assises-mediation-numerique.fr"
+  }
+]
