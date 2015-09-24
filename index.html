@@ -32,7 +32,7 @@
       </div>
       <div class="row">
         <div class="col-md-2">
-          <div class="event" ng-repeat="event in events |  filter: { name:search, description:search}  | orderBy: startDate : 1">
+          <div class="event" ng-repeat="event in events | filter: { name:search, description:search}| eventFilter: eventFilter | orderBy: startDate : 1">
             <div>
               {{ event.startDate | amDateFormat :'ll' }} <img src="{{ event.type | typeToIcon }}" class="pull-right">
               <br/><a href="{{event.url}}">{{event.name}}</a>

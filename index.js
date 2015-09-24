@@ -79,3 +79,17 @@ app.filter("eventsToMarks", function () {
         return marks;
     };
 });
+
+app.filter("eventFilter", function () {
+    return function (events, filter) {
+        var out = [];
+        angular.forEach(events, function (event) {
+            var ev={};
+            if (((event.type=='meetup')&&(filter.meetup)) || ((event.type=='conference')&&(filter.conference)))
+            {
+              out.push(event);
+            }
+        });
+        return out;
+    };
+});
